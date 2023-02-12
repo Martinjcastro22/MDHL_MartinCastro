@@ -36,17 +36,12 @@ a {
     background-color: #D2001A;
     color: #FFDE00;
 }
-a:hover{
+a:hover, a:active{
     background-color: black;
     box-sizing: content-box;
     width: 100%;
     border: solid black 10px;
     padding: 5px;
-}
-a:visited{
-    box-sizing: content-box;
-    width: 100%;
-    border: solid black 10px;
 }
 /*BANNER STYLES*/
 #banner{
