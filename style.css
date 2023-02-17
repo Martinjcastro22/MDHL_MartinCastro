@@ -1,6 +1,3 @@
-/*colores
-DC3535 por rojo
-F49D1A por amarillo */
 /*ESTILOS GENERALES*/
 
 *{
@@ -12,6 +9,7 @@ F49D1A por amarillo */
 body {
     background-color: antiquewhite;
     font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
 }
 /*NAV-STYLES*/
 header{
@@ -82,14 +80,34 @@ h2{
     position: absolute;
     width: 100%;
 }
-/*main styles*/
+@media(max-width: 960px){
+
+    h1{
+        margin-top: 15px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+}
+@media(max-width: 650px){
+    header{
+        position: relative;
+    }
+    #nav-bar{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*main styles-- index*/
 
 .container{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content:center;
-    margin-top: 350px;
+    margin-top: 375px;
     box-shadow: 2px  #D2001A;
     padding: 1rem;
 }
@@ -106,8 +124,6 @@ section img, section div{
 
 section img{
     width: 100%;
-    object-fit: cover;
-    
 }
 
 section div{
@@ -118,19 +134,28 @@ section div{
 
 section div h3{
     width: auto;
-    color: white;
+    padding: 1rem;
+    color: #FFDE00;
     font-size: 2rem;
-    text-shadow: 3px 3px rgba(0, 0, 0, 0.445);
-    background-color: rgba(0, 0, 0, 0.261);
+    text-align: center;
+    text-shadow: 2px 2px 2px #D2001A;
+    background-color: antiquewhite;
 }
 
 section div p{
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.435);
-    
+    background-color: antiquewhite;
+    text-align: center;
 }
+@media(max-width: 650px){
+    section{
+        width: 100%;
+    }
+}
+/*main styles-- about*/
 .container-about{
     background-color: antiquewhite;
+    width: 100%;
     height: 400px;
     padding: 2rem;
     margin-top: 300px;
@@ -138,23 +163,89 @@ section div p{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 20px;
 }
-.articles-about{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
-}
-.title-article{
-    text-align: center;
-    padding: 1rem;
-}
+
 #logo-about{
+    margin-top: 50px;
     width: 250px;
     height: 250px;
+    
 }
+
+.articles-about{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+    justify-content: start;
+    border: 1px solid rgb(81, 100, 124);
+}
+.background-about{
+    background-color: #FFE15D;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40%;
+    
+    border-radius: 30px;
+    height: 500px;
+}
+.title-article{
+    text-align:start;
+    color: #FFDE00;
+    background-color: #D2001A;
+    text-shadow: 1px 2px rgb(15, 13, 13);
+    border-radius: 1px 1px;
+}
+.articles-about article{
+    padding: 0.5rem;
+    width: 100%;
+
+}
+.articles-about article p{
+    background-color: #FFE15D;
+    padding: 1rem;
+}
+.img-articles{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    flex-direction: column;
+    width: 20%;
+    height: 500px;
+
+}
+.img-articles img{
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+.img-articles img:hover{
+    transform: scale(1);
+    scale: 1.25;
+}
+@media(max-width: 650px){
+    .container-about{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .background-about{
+        width: 100%;
+    }
+    .articles-about{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+/*main styles-- contact*/
 .container-contact{
     background-color: antiquewhite;
     height: 400px;
@@ -174,6 +265,7 @@ footer{
     padding: 2rem;
     margin-top: -100px;
 }
+/*main styles-- rules*/
 .container-rules{
     background-color: antiquewhite;
     width: 80%;
@@ -195,10 +287,19 @@ footer{
 }
 h4{
     padding: 1rem;
+    font-size: 1.5rem;
+}
+.title-rules{
+    font-size: 3rem;
+    font-family: sans-serif;
+    padding: 1rem;
+    color: #D2001A;
+    text-shadow: 1px 2px rgb(15, 13, 13);
 }
 li{
     padding: 0.5rem;
 }
+/*main styles-- game-info*/
 .container-game-info{
     margin-top: 400px;
     display: flex;
@@ -256,4 +357,93 @@ caption {
 h6{
     font-size: 2rem;
     padding: 1rem;
+}
+/*main styles-- registration*/
+.form{
+    margin-top: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 748px;
+    height : 100%;
+    margin : 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    background : #FFE15D;
+}
+.title-form{
+    font-size: 2rem;
+    font-family: sans-serif;
+    padding: 1rem;
+    color: #D2001A;
+    text-shadow: 1px 2px rgb(15, 13, 13);
+    position: absolute;
+    margin-top: -75px;
+}
+
+fieldset{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.form1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1rem;
+    
+}
+.form2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1rem;
+    
+}
+.form2 input{
+    display: flex;
+    flex-direction: row;
+}
+.pre-school{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+.closets-school{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+input {
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+button {
+    display: flex;
+    padding-right: 5px;
+    font: bold .6em sans-serif;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    width: 75px;
+    text-align: center;
+}
+
+button:hover,
+button:focus {
+    outline     : none;
+    background  : #D2001A;;
+    color       : #FFF;
 }
